@@ -2,7 +2,8 @@
  * Experimworking *
  ***********************/
 
-import { core, data, sound, util, visual, hardware } from './lib/psychojs-2025.1.1.js';
+
+const { core, data, sound, util, visual, hardware } = window;
 const { PsychoJS } = core;
 const { TrialHandler, MultiStairHandler } = data;
 const { Scheduler } = util;
@@ -1476,3 +1477,4 @@ async function quitPsychoJS(message, isCompleted) {
   
   return Scheduler.Event.QUIT;
 }
+
