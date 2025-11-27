@@ -347,7 +347,7 @@ for (let i = 1; i <= 90; i++) {
   routineTimer = new util.CountdownTimer();  // to track time remaining of each (non-slip) routine
   
   
-}
+
 
 
 var t;
@@ -1565,6 +1565,7 @@ async function quitPsychoJS(message, isCompleted) {
   
   return Scheduler.Event.QUIT;
 }
+
 
 
 
