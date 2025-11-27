@@ -346,7 +346,7 @@ for (let i = 1; i <= 90; i++) {
   globalClock = new util.Clock();  // to track the time since experiment started
   routineTimer = new util.CountdownTimer();  // to track time remaining of each (non-slip) routine
   
-  return Scheduler.Event.NEXT;
+  
 }
 
 
@@ -1565,6 +1565,7 @@ async function quitPsychoJS(message, isCompleted) {
   
   return Scheduler.Event.QUIT;
 }
+
 
 
 
