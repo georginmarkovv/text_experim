@@ -1,22 +1,25 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>experimworking</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>experiment</title>
 
-    <link rel="stylesheet" href="./lib/psychojs-2025.1.1.css">
-  </head>
-  <body>
+  <link rel="stylesheet" href="./lib/psychojs-2025.1.1.css">
+</head>
+<body>
 
-    <div id="root"></div>
+  <div id="root"></div>
 
-    <!-- Main experiment as MODULE -->
-    <script type="module" src="./experimworking.js"></script>
+  <!-- CreateJS REQUIRED for PsychoJS -->
+  <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
 
-    <!-- Legacy fallback -->
-    <script src="./lib/psychojs-2025.1.1.iife.js" nomodule></script>
-    <script src="./experimworking-legacy-browsers.js" nomodule></script>
+  <!-- Your experiment (ESM) -->
+  <script type="module" src="./experimworking.js"></script>
 
-  </body>
+  <!-- Fallback for legacy browsers -->
+  <script src="./lib/psychojs-2025.1.1.iife.js" nomodule></script>
+  <script src="./experimworking-legacy-browsers.js" nomodule></script>
+
+</body>
 </html>
