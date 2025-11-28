@@ -16,7 +16,7 @@ import * as psychojs from "./lib/psychojs-2025.1.1.js";
 const psychoJS = new psychojs.core.PsychoJS({
   debug: true
 });
-
+const data = psychoJS.experiment;
 psychoJS.openWindow({
   fullscr: true,
   color: new psychojs.util.Color('black'),
@@ -29,7 +29,7 @@ psychoJS.openWindow({
 const expInfo = {
   participant: (Math.floor(Math.random() * 1e6)).toString().padStart(6,'0'),
   session: '001',
-  date: new Date().toISOString().replace(/[:.]/g, "-")
+  date:  new Date().toISOString().replace(/[:.]/g, "-")
  
 };
 
@@ -687,6 +687,7 @@ async function sendDataToDataPipe({ experimentID = '1aALn2OO9S9P' } = {}) {
     psychoJS.quit({ message: 'Experiment aborted due to error', isCompleted: false });
   }
 })();
+
 
 
 
