@@ -18,16 +18,13 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/preloadjs@1.0.1/lib/preloadjs.min.js"></script>
 
-    <!-- NEW: PsychoJS ESM (main library for modern browsers) -->
-    <script type="module">
-      import * as psychojs from "./lib/psychojs-2025.1.1.esm.js";
-      window.pj = psychojs;   // ← делаем глобальным, чтобы твой код мог писать new pj.PsychoJS()
-    </script>
+    <!-- Main PsychoJS library (global namespace) -->
+    <script src="./lib/psychojs-2025.1.1.js"></script>
 
-    <!-- Your experiment script (must be module too) -->
-    <script src="./experimworking.js" type="module"></script>
+    <!-- Your experiment (NOT module!) -->
+    <script src="./experimworking.js"></script>
 
-    <!-- Legacy fallback for older browsers -->
+    <!-- Legacy fallback -->
     <script src="./lib/psychojs-2025.1.1.iife.js" nomodule></script>
     <script src="./experimworking-legacy-browsers.js" nomodule></script>
 
