@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>experimworking [PsychoPy]</title>
+    <title>experimworking</title>
 
     <link rel="stylesheet" href="./lib/psychojs-2025.1.1.css">
   </head>
@@ -11,11 +11,12 @@
 
     <div id="root"></div>
 
-    <!-- Global psychojs namespace -->
-    <script src="./lib/psychojs-2025.1.1.iife.js"></script>
+    <!-- Main experiment as MODULE -->
+    <script type="module" src="./experimworking.js"></script>
 
-    <!-- Your experiment -->
-    <script src="./experimworking.js"></script>
+    <!-- Legacy fallback -->
+    <script src="./lib/psychojs-2025.1.1.iife.js" nomodule></script>
+    <script src="./experimworking-legacy-browsers.js" nomodule></script>
 
   </body>
 </html>
